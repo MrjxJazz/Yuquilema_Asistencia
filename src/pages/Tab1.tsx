@@ -1,5 +1,4 @@
 import {
-  IonButton,
   IonCard,
   IonContent,
   IonHeader,
@@ -7,14 +6,11 @@ import {
   IonTitle,
   IonToolbar,
   IonCardContent,
-  IonGrid,
-  IonCol,
-  IonRow,
-  IonIcon,
-  IonInput,
+  IonAvatar,
 } from "@ionic/react";
 import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
+import Login from "./../components/login/login";
 import { person, lockClosed, star, logIn, personAdd } from "ionicons/icons";
 
 const Tab1: React.FC = () => {
@@ -22,58 +18,28 @@ const Tab1: React.FC = () => {
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Registro</IonTitle>
+          <IonTitle className="ion-text-center">LOGIN</IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen color="primary" className="ion-padding">
-        <IonCard color={"dark"} >
-          <br />
+        <IonCard color="dark" className="ion-text-center">
           <center>
-            <img alt="Imagen" src="./assets/images/login.jpg" width={100}></img>
-            <br />
+            <IonAvatar>
+              <img
+                alt="Imagen"
+                src="./assets/images/login.jpg"
+                width={100}
+                className="ion-margin-top ion-margin-bottom"
+              />
+            </IonAvatar>
           </center>
           <br />
-          <IonCardContent color="primary">
-            <IonGrid fixed={true}>
-              <IonRow>
-                <IonCol>
-                  <IonIcon aria-hidden="true" icon={person} size="small" />
-                </IonCol>
-                <IonCol size="auto">
-                  <IonInput
-                    placeholder="Ingrese Usuario"
-                    maxlength={20}
-                  ></IonInput>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-            <IonGrid fixed={true}>
-              <IonRow>
-                <IonCol>
-                  <IonIcon aria-hidden="true" icon={lockClosed} size="large" />
-                </IonCol>
-                <IonCol size="auto">
-                  <IonInput
-                    placeholder="Ingrese Clave"
-                    type="password"
-                    value=""
-                  ></IonInput>
-                </IonCol>
-              </IonRow>
-            </IonGrid>
-            <IonButton color="secondary" expand="block" shape="round">
-              Ingresar
-              <IonIcon slot="start" icon={logIn}></IonIcon>
-            </IonButton>
-            <br />
-            <br />
-            <br />
+          <IonCardContent>
             <center>
-              <h6>
-                {" "}
-                Por su seguridad NO comparta su usuario y clave con terceros
-              </h6>
+              <h1>BIENVENIDO</h1>
             </center>
+            <br />
+            <Login />
           </IonCardContent>
         </IonCard>
       </IonContent>

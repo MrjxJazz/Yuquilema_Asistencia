@@ -6,29 +6,28 @@ import {
   IonTitle,
   IonToolbar,
   IonCard,
-  IonCardHeader,
-  IonCardTitle,
   IonCardContent,
 } from "@ionic/react";
-import Create from "../components/create/create";
+import { person, lockClosed, star, logIn, personAdd } from "ionicons/icons";
+import Report from "../components/read/report";
+import Attendant from "../components/register/attendant";
 
-const Tab2: React.FC = () => {
+const Tab4: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle className="ion-text-center">REGISTRO</IonTitle>
+          <IonTitle className="ion-text-center">
+            REGISTRO DE ASISTENCIA
+          </IonTitle>
         </IonToolbar>
       </IonHeader>
       <IonContent fullscreen color="primary" className="ion-padding">
         <IonCard color="dark">
-          <IonCardHeader>
-            <IonCardTitle className="ion-text-center">
-              Registro de Usuario Nuevo
-            </IonCardTitle>
-          </IonCardHeader>
           <IonCardContent>
-            <Create />
+            <Attendant />
+            <br />
+            <Report />
           </IonCardContent>
         </IonCard>
       </IonContent>
@@ -36,4 +35,4 @@ const Tab2: React.FC = () => {
   );
 };
 
-export default Tab2;
+export default Tab4;
